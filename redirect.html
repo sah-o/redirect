@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <script>
+        // Function to get URL parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('url');
+        }
+
+        // Function to log visitor's IP address (replace this with your logging method)
+        async function logVisitor(ip) {
+            // Use a logging service or your own backend to store the IP
+            console.log('Visitor IP:', ip);
+        }
+
+        // Fetch visitor's IP address (using a free IP service)
+        async function fetchVisitorIP() {
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            logVisitor(data.ip);
+            window.location.href = getQueryParams(); // Redirect to the target URL
+        }
+
+        // Run the function to fetch the visitor's IP and redirect
+        fetchVisitorIP();
+    </script>
+</body>
+</html>
