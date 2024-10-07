@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=900, initial-scale=1">
+    <title>McDonald's Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="topBar">
+        <div><b style="font-weight:bold;">McDonald's Clicker</b></div>
+    </div>
+
+    <div id="game">
+        <h2>Click the Cheeseburger to Earn!</h2>
+        <div id="burgerContainer" class="item">
+            <img src="img/cheeseburger.png" id="cheeseburger" alt="Cheeseburger">
+        </div>
+        <div>
+            <h3>Score: <span id="score">0</span></h3>
+        </div>
+
+        <div class="store">
+            <h2>Store</h2>
+            <div id="bigMacContainer" class="item" style="display: none;">
+                <img src="img/bigmac.png" alt="Big Mac">
+                <p>Buy Big Mac (Cost: <span id="bigMacCost">100</span> clicks)</p>
+            </div>
+            <div id="nuggetsContainer" class="item" style="display: none;">
+                <img src="img/nuggets.png" alt="Nuggets">
+                <p>Buy Nuggets (Cost: <span id="nuggetsCost">500</span> clicks)</p>
+            </div>
+            <div id="cursorContainer" class="item">
+                <img src="img/cursor.png" alt="Cursor">
+                <p>Buy Cursor (Cost: <span id="cursorCost">50</span> clicks)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
